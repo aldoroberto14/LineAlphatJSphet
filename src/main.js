@@ -206,10 +206,10 @@ class LINE extends LineAPI {
             this._sendMessage(seq, 'halo disini tasya :)');
         }
 
-        if(txt == 'speed') {
-            const curTime = (Date.now() / 1000);
+        if(txt == 'sp') {
+            const curTime = (Date.now() / 10);
             await this._sendMessage(seq,'processing....');
-            const rtime = (Date.now() / 1000) - curTime;
+            const rtime = (Date.now() / 10) - curTime;
             await this._sendMessage(seq, `${rtime} second`);
         }
 
