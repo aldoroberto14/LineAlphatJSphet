@@ -207,9 +207,9 @@ class LINE extends LineAPI {
         }
 
         if(txt == 'sp') {
-            const curTime = (Date.now() / 10);
+            const curTime = (Date.now() / 100000);
             await this._sendMessage(seq,'processing....');
-            const rtime = (Date.now() / 10) - curTime;
+            const rtime = (Date.now() / 100000) - curTime;
             await this._sendMessage(seq, `${rtime} second`);
         }
 
