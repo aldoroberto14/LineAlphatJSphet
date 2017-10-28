@@ -189,7 +189,7 @@ class LINE extends LineAPI {
         let txt = textMessages.toLowerCase();
         let messageID = seq.id;
 
-        if(cmd == 'cancel') {
+        if(cmd == 'ยกเลิกเชิญ') {
             if(payload == 'group') {
                 let groupid = await this._getGroupsInvited();
                 for (let i = 0; i < groupid.length; i++) {
@@ -202,8 +202,8 @@ class LINE extends LineAPI {
             }
         }
 
-        if(txt == 'halo' || txt == 'sya') {
-            this._sendMessage(seq, 'halo disini tasya :)');
+        if(txt == 'bot' || txt == 'sya') {
+            this._sendMessage(seq, '[By.ต้า ทีมทดลองบอท]\n[By.เพชร ทีมทดลองบอท] :)');
         }
 
         if(txt == 'sp') {
@@ -228,8 +228,8 @@ class LINE extends LineAPI {
             }
         }
 
-        if(txt == 'setpoint') {
-            this._sendMessage(seq, `Setpoint for check reader.`);
+        if(txt == 'ตั้งเวลา') {
+            this._sendMessage(seq, `โปรดรอ..กรุณาพิมพ์ [อ่าน] ok.`);
             this.removeReaderByGroup(seq.to);
         }
 
@@ -238,7 +238,7 @@ class LINE extends LineAPI {
             this._sendMessage(seq, `Remove all check reader on memory`);
         }  
 
-        if(txt == 'recheck'){
+        if(txt == 'อ่าน'){
             let rec = await this.recheck(this.checkReader,seq.to);
             const mentions = await this.mention(rec);
             seq.contentMetadata = mentions.cmddata;
@@ -263,8 +263,8 @@ class LINE extends LineAPI {
             this.setState(seq)
         }
 	
-        if(txt == 'myid') {
-            this._sendMessage(seq,`Your ID: ${seq.from}`);
+        if(txt == 'mid') {
+            this._sendMessage(seq,`Your Mid: ${seq.from}`);
         }
 
         if(txt == 'speedtest' && isAdminOrBot(seq.from)) {
