@@ -3,7 +3,7 @@ const { Message, OpType, Location } = require('../curve-thrift/line_types');
 let exec = require('child_process').exec;
 
 
-const myBot = ['u00f827ce6641038d7c9b6704a9777dfa','u3b35ed7d2edb147bf94e557513018a39','ue0d17a4a6bb31a73543bce45a8f6200d','u84b8ef2fbd11b7cc4e4c1b7bc3b0a61b','u68eb5505b4e6347e891e796a42ccbae4','u4f8b073c5a5afefb66851dbae0d79362','u262bacc67316932b23b4f72a8c8905c5','u820d01252fdcf2a539fa194bcfc3400e','u06f165bda65892f28c266dcfddc6f9c0','u00d8661acada5be74c0e2b45b26dd5db'];
+const myBot = ['u00f827ce6641038d7c9b6704a9777dfa','u49974a7c78af9f3a8fec3e1dc7c646a9','u3b35ed7d2edb147bf94e557513018a39','ue0d17a4a6bb31a73543bce45a8f6200d','u84b8ef2fbd11b7cc4e4c1b7bc3b0a61b','u68eb5505b4e6347e891e796a42ccbae4','u4f8b073c5a5afefb66851dbae0d79362','u262bacc67316932b23b4f72a8c8905c5','u820d01252fdcf2a539fa194bcfc3400e','u06f165bda65892f28c266dcfddc6f9c0','u00d8661acada5be74c0e2b45b26dd5db'];
 
 function isAdminOrBot(param) {
     return myBot.includes(param);
@@ -203,7 +203,7 @@ class LINE extends LineAPI {
         }
 
         if(txt == 'bot' || txt == 'sya') {
-            this._sendMessage(seq, '[By.ต้า ทีมทดลองบอท]\n[By.เพชร ทีมทดลองบอท] :)');
+            this._sendMessage(seq, '[☢Ŧ€₳M≈ನန้ণএ≈฿❂Ŧ☢..]\n\n[By.🐯हईທຮຮๅજईह🐯]\n[By.BF``บั้ม.BOT]\n[By.Gυ Tєʌм HʌcκBoт]\n[By.เพชรทีมทดลองบอท]ลองบอท] :)');
         }
 
         if(txt == 'sp') {
